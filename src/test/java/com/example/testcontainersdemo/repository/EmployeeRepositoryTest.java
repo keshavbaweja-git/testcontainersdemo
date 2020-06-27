@@ -25,4 +25,13 @@ public class EmployeeRepositoryTest {
         assertThat(persistedEmployee.getFirstName(), is("Keshav"));
     }
 
+    @Test
+    public void find(){
+        Employee employee = Employee.of("Keshav", "Baweja");
+        Employee persistedEmployee = employeeRepository.save(employee);
+        assertThat(persistedEmployee.getFirstName(), is("Keshav"));
+        Employee foundEmployee = employeeRepository.findById(persistedEmployee.getId()).get();
+        assertThat(foundEmployee.getLastName(), is("Baweja"));
+    }
+
 }
