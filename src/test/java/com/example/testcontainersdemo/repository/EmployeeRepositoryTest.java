@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
+import org.springframework.transaction.annotation.Transactional;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -13,6 +14,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 @SpringBootTest(classes = {TestcontainersdemoApplication.class})
 @Testcontainers
 @Sql({"/test-schema.sql"})
+@Transactional
 public class EmployeeRepositoryTest {
 
     @Autowired
