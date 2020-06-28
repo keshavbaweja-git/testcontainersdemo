@@ -11,6 +11,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+
 @SpringBootTest(classes = {TestcontainersdemoApplication.class})
 @Testcontainers
 @Sql({"/test-schema.sql"})
