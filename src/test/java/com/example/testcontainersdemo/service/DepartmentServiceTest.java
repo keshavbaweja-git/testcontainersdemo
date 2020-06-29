@@ -1,4 +1,5 @@
 package com.example.testcontainersdemo.service;
+
 import com.example.testcontainersdemo.TestcontainersdemoApplication;
 import com.example.testcontainersdemo.model.Department;
 import org.junit.jupiter.api.Test;
@@ -8,7 +9,7 @@ import org.springframework.test.context.jdbc.Sql;
 import org.springframework.transaction.annotation.Transactional;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
-import java.util.List;
+import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -24,7 +25,7 @@ public class DepartmentServiceTest {
 
     @Test
     public void findAll(){
-        List<Department> departments = departmentService.findAll();
+        Map<Long, Department> departments = departmentService.findAll();
         assertThat(departments.size(), is(3));
         departments = departmentService.findAll();
         assertThat(departments.size(), is(3));
