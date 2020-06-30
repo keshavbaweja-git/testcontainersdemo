@@ -25,10 +25,10 @@ public class DepartmentServiceTest {
 
     @Test
     public void findAll(){
-        Map<Long, Department> departments = departmentService.findAll();
-        assertThat(departments.size(), is(3));
+        Map<String, Department> departments = departmentService.findAll();
+        assertThat(departments.size(), is(4));
         departments = departmentService.findAll();
-        assertThat(departments.size(), is(3));
+        assertThat(departments.size(), is(4));
     }
 
 }

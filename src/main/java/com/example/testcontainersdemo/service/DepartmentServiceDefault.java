@@ -17,9 +17,9 @@ public class DepartmentServiceDefault implements DepartmentService {
 
     @Override
     @Cacheable("departmentCache")
-    public Map<Long, Department> findAll() {
-        final Map<Long, Department> m = new HashMap<>();
-        departmentRepository.findAll().forEach(d -> m.put(d.getId(), d));
+    public Map<String, Department> findAll() {
+        final Map<String, Department> m = new HashMap<>();
+        departmentRepository.findAll().forEach(d -> m.put(d.getName(), d));
         return m;
     }
 

@@ -3,22 +3,25 @@ package com.example.testcontainersdemo.model;
 import org.springframework.data.annotation.Id;
 
 public class Employee {
-    private final @Id Long id;
+    @Id
+    private final Long id;
     private final String firstName;
     private final String lastName;
+    private final Long deptId;
 
-    public Employee(Long id, String firstName, String lastName) {
+    public Employee(Long id, String firstName, String lastName, Long deptId) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.deptId = deptId;
     }
 
-    public static Employee of(String firstName, String lastName){
-        return new Employee(null, firstName, lastName);
+    public static Employee of(String firstName, String lastName, Long deptId) {
+        return new Employee(null, firstName, lastName, deptId);
     }
 
-    public Employee withId(Long id){
-        return new Employee(id, firstName, lastName);
+    public Employee withId(Long id) {
+        return new Employee(id, firstName, lastName, deptId);
     }
 
     public Long getId() {
@@ -31,6 +34,10 @@ public class Employee {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public Long getDeptId() {
+        return deptId;
     }
 
     @Override

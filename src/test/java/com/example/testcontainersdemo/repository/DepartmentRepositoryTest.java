@@ -28,6 +28,6 @@ public class DepartmentRepositoryTest {
     public void findAll(){
         Iterable<Department> departmentIterable = departmentRepository.findAll();
         List<Department> departments = ImmutableList.copyOf(departmentIterable);
-        assertThat(departments.size(), is(3));
+        assertThat(departments.size(), is(4));
     }
 }
