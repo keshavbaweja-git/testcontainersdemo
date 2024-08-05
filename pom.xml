@@ -19,7 +19,7 @@
 		<testcontainers-embedded-postgresql.version>1.76</testcontainers-embedded-postgresql.version>
 		<testcontainers-embedded-redis.version>1.76</testcontainers-embedded-redis.version>
 		<testcontainers-junit-jupiter.version>1.14.3</testcontainers-junit-jupiter.version>
-		<redisson.version>3.13.1</redisson.version>
+		<redisson.version>3.22.0</redisson.version>
 		<commons-collections4.version>4.4</commons-collections4.version>
 	</properties>
 
